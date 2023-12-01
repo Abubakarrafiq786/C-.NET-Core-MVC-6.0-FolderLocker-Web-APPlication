@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Folder Locker";
+}
+
+<h2>Folder Locker</h2>
+<p>@ViewBag.Status</p>
+
+<form asp-action="LockFolder" method="post">
+    <label>Enter Folder Path:</label>
+    <input type="text" name="folderPath" />
+    <br />
+    <input type="submit" value="Lock Folder" />
+</form>
+
+<form asp-action="UnlockFolder" method="post">
+    <label>Enter Folder Path:</label>
+    <input type="text" name="folderPath" />
+    <br />
+    <input type="submit" value="Unlock Folder" />
+</form>
+<form asp-action="UploadFile" method="post" enctype="multipart/form-data">
+    <label>Enter Folder Path:</label>
+    <input type="text" name="folderPath" />
+    <br />
+    <label>Select File:</label>
+    <input type="file" name="file" />
+    <br />
+    <input type="submit" value="Upload File" />
+</form>
